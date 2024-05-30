@@ -1,0 +1,19 @@
+{
+  "name": "vpc",
+  "version": "1.0.0",
+  "description": "Things that I run in a vpc",
+  "scripts": {
+    "build": "turbo build",
+    "start": "turbo start"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/backlog-api",
+    "packages/tsconfig"
+  ],
+  "devDependencies": {
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5"
+  }
+}
