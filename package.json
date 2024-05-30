@@ -1,0 +1,27 @@
+{
+  "name": "vpc",
+  "version": "1.0.0",
+  "description": "Things that I run in a vpc",
+  "scripts": {
+    "build": "turbo build",
+    "start": "turbo start",
+    "lint": "turbo lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/backlog-api",
+    "packages/tsconfig"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "globals": "^15.3.0",
+    "prettier": "3.2.5",
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0"
+  }
+}
