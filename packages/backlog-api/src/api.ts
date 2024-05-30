@@ -7,7 +7,7 @@ const router = new Router();
 // Define a simple GET route
 router.get("/", (ctx) => {
   ctx.body = {
-    message: "Hello, World!",
+    message: 'Hello, World!',
   };
 });
 
