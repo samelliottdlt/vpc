@@ -17,7 +17,8 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages/api"
+    "packages/api",
+    "packages/server"
   ],
   "devDependencies": {
     "@eslint/js": "^9.39.5",
