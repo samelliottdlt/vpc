@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    /* Language and environment. `types: ["node"]` keeps ambient globals to exactly the
+       Node surface; nothing else should be able to leak in. */
+    "target": "es2023",
+    "lib": ["esnext"],
+    "types": ["node"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
+    /* Emit. Declarations are required because packages consume each other's dist output,
+       and `composite` is what lets `tsc --build` order and cache the graph. */
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+
+    /* Type checking. The compiler is the primary correctness gate here, not the linter, so
+       this is deliberately stricter than `strict` alone.
+       - `strict` already bans *implicit* any. There is no compiler flag for *explicit*
+         `any`; that one rule is why typescript-eslint is still worth its place.
+       - `noUnusedLocals` / `noUnusedParameters` make ESLint's no-unused-vars redundant.
+       - `exactOptionalPropertyTypes` is intentionally NOT enabled: these are JSON APIs and
+         `JSON.stringify` already drops undefined, so it only buys noise on passthrough. */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Module hygiene. `erasableSyntaxOnly` keeps the source compatible with Node's native
+       type stripping, so nothing here depends on TypeScript-only runtime semantics. */
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "erasableSyntaxOnly": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}

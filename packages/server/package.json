@@ -1,0 +1,21 @@
+{
+  "name": "@vpc/server",
+  "version": "1.0.0",
+  "description": "Transport adapters that expose api packages over REST and JSON-RPC",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "typecheck": "tsc --build",
+    "lint": "eslint src",
+    "test": "node --test \"dist/**/*.test.js\""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@vpc/api": "*"
+  }
+}
